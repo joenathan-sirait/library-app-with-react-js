@@ -1,15 +1,16 @@
 import React, { useState } from 'react'
-import { useLocation } from 'react-router-dom';
+import Form from 'react-bootstrap/Form';
+import { Link, useLocation } from 'react-router-dom';
 import Button from '../../components/Button';
 import Input from '../../components/Input';
 import LayoutAuth from '../../layouts/auth'
-import { Form } from '../../styles/pages/Login';
+import { FormInput } from '../../styles/pages/Login';
 
 
     const Login = () => {
         const [username, setUsername] = useState("");
         const [password, setPassword] = useState("");
-        const location = useLocation();
+  
        
         const usernameChange = (e) => {
           e.preventDefault();
@@ -40,11 +41,11 @@ import { Form } from '../../styles/pages/Login';
   return (
     <LayoutAuth>
     
-    <Form className="form-login-wrapper">
+    <FormInput className="form-login-wrapper">
         <form>
           <h1>Login</h1>
           <p>Welcome Back, Please Login
- to your account</p>
+          to your account</p>
           <div>
      
             <Input
@@ -61,10 +62,16 @@ import { Form } from '../../styles/pages/Login';
               onChange={(e) => passwordChange(e)}
             />
           </div>
+          <div className="d-flex justify-content-around">
+            <Form.Group className="mb-3 me-3" controlId="formBasicCheckbox">
+              <Form.Check type="checkbox" label="Remember Me" />
+            </Form.Group>
+            <Link className="text-decoration-none text-dark">Forgot Password</Link>
+          </div>
           <Button  buttonName="Login" onClick={(e) => checkUser(e)} />
           <Button to="/register" primary buttonName="Sing Up"/>
         </form>
-      </Form>
+      </FormInput>
     </LayoutAuth>
   )
 }

@@ -11,7 +11,14 @@ const ModalDelete = (props) => {
       const { buttonName, modalTitle, desc, className} = props;
       const [show, setShow] = useState(false);
       const handleClose = () => setShow(false);
-      const handleShow = () => setShow(true);
+      const handleShow = () => {
+      if (window.confirm("Do you want to save changes?") == true) {
+          setShow(true);
+      } else {
+        setShow(false)
+      }
+        
+      } 
 
   return (   
         <Row>
@@ -27,7 +34,6 @@ const ModalDelete = (props) => {
             <BsFillCheckCircleFill />
             <h3>{desc}</h3>
             </Modal.Body>
-        
           </Modal>
           </Row> 
       );

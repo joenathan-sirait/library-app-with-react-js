@@ -11,7 +11,8 @@ export const ButtonStyled = styled.a`
         margin-right: 20px;
         margin-top: 20px;
         text-decoration: none;
-        border-radius: 50px;
+        border: 1px grey solid;
+        border-radius: 12px;
     }
     &.parent .link {    
         color: ${props => props.primary ? "black" : "white"};

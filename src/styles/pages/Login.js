@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const Form = styled.div`
+export const FormInput = styled.div`
 &.form-login-wrapper {
     display: flex;
     justify-content: center;

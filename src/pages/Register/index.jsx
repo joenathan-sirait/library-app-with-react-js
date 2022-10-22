@@ -2,7 +2,7 @@ import React from 'react'
 
 import Input from '../../components/Input'
 import LayoutAuth from '../../layouts/auth'
-import { Form } from '../../styles/pages/Login'
+import { FormInput } from '../../styles/pages/Login'
 import Button from '../../components/Button';
 
 
@@ -10,7 +10,7 @@ import Button from '../../components/Button';
 const Register = () => {
   return (
   <LayoutAuth>
-   <Form className="form-login-wrapper">
+   <FormInput className="form-login-wrapper">
         <form>
           <h1>Register</h1>
           <p>Welcome Back, Please Register
@@ -30,7 +30,7 @@ const Register = () => {
           <Button  to="/login" buttonName="Login"  />
           <Button to="/register" primary buttonName="Sing Up"/>
         </form>
-      </Form>
+      </FormInput>
   </LayoutAuth>
   )
 }
