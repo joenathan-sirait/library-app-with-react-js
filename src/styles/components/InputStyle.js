@@ -7,4 +7,5 @@ export const InputStyled = styled.input`
     box-sizing: border-box;
     border: 1px grey solid;
     border-radius: 12px;
+    
 `

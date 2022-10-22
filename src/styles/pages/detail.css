@@ -1,0 +1,7 @@
+@media  (max-width: 768px) {
+    .button {
+        position: absolute !important;
+        left: 520px !important;
+
+    }
+  }

@@ -17,7 +17,6 @@ const Carousels = () => {
             <Link className="text-decoration-none text-dark" to={'/detail/' + book.id }>
                 <img
                 width="800"
-                
                 src={book.image}
                 alt="First slide"
                 />

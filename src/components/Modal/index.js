@@ -4,17 +4,21 @@ import { Row } from 'react-bootstrap';
 import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
 import Input from '../Input';
+import ModalDelete from '../ModalDelete';
 
 const ModalShow = (props) => {
+      
       const { buttonName, modalTitle, className, dataAlert} = props;
       const [show, setShow] = useState(false);
       const handleClose = () =>{
         setShow(false);
       } 
       const handleSave = () => {
+        
         setShow(false)
+        
         const myObj = dataAlert;
-        alert (JSON.stringify(myObj)); 
+        alert(JSON.stringify(myObj)); 
       }
       const handleShow = () => setShow(true);
 

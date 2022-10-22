@@ -12,6 +12,10 @@ export const Wrapper = styled.div`
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
+
+    @media (max-width: 768px) {
+      display: none; 
+  }
   }
   &.layout-wrapper .left h1 {
     margin: 30px;

@@ -5,6 +5,7 @@ import { BsFillArrowLeftCircleFill } from "react-icons/bs";
 import ModalDelete from '../../components/ModalDelete';
 import { dataBooks } from '../../data/book';
 import { Col, Container, Row } from 'react-bootstrap';
+import "../../styles/pages/detail.css"
 
 const Detail = () => {
     const {id} = useParams();
@@ -16,14 +17,14 @@ const Detail = () => {
         <img style={{width: "100vw", height: "50vh"}} src={book.image} alt="" />
         <div className="d-flex position-absolute top-0 end-0 me-3 mt-3 "> 
        <ModalShow dataAlert="Succesfuly Edit Data" className="text-light fs-3 fw-bold me-5" buttonName="Edit" modalTitle="Edit Data"></ModalShow>
-       <ModalDelete  className="text-light fs-3 fw-bold" buttonName="Delete" modalTitle="Delete Data" desc="Succesfully Delete Data"></ModalDelete>
+       <ModalDelete dataAlert="Delete" className="text-light fs-3 fw-bold" buttonName="Delete" modalTitle="Delete Data" desc="Succesfully Delete Data"></ModalDelete>
        
        </div>
        <Link className='fs-1 fw-bold text-decoration-none text-light position-absolute top-0 start-0 ms-3 mt-3'  to="/"><BsFillArrowLeftCircleFill /></Link>
         
         <Container >
         <Row>
-        <Col sm={10}>
+        <Col lg={10} md={8}>
         <Row>
           <Col sm={8}>
             <Link className="btn btn-warning text-light mt-3 mb-2">{book.category}</Link>
@@ -57,16 +58,16 @@ const Detail = () => {
         <Row>
           
         </Row>
-        <Col sm={2}>
+        <Col lg={2} md={4}>
           <img className="position-absolute end-0 me-5" width={200} style={{position: "absolute", top: "180px"}} src={book.cover} alt="cover-book" />
           {(() => {
               if (book.availability == "empty") {
                 return (
-                  <ModalDelete className="btn btn-warning text-light fs-4 fw-bold position-absolute w-25 end-0 bottom-0 mb-5 me-3 disabled" buttonName="Borrow" modalTitle="Borrow Data" desc="Succesfully Borrow Data" ></ModalDelete>
+                  <h1 className="text-danger fs-4 fw-bold position-absolute w-25 end-0 bottom-0 mb-5 me-3 ">Not Available</h1>
                 )
               } else {
                 return (
-                  <ModalDelete className="btn btn-warning text-light fs-4 fw-bold position-absolute w-25 end-0 bottom-0 mb-5 me-3 " buttonName="Borrow" modalTitle="Borrow Data" desc="Succesfully Borrow Data" ></ModalDelete>
+                  <ModalDelete  dataAlert="Borrow" className="button btn btn-warning text-light fs-4 fw-bold position-absolute w-25 end-0 bottom-0 mb-5 me-3 " buttonName="Borrow" modalTitle="Borrow Data" desc="Succesfully Borrow Data" ></ModalDelete>
 
                 )
               }

@@ -13,8 +13,8 @@ const NavbarTop = () => {
           <Container>
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Navbar.Collapse id="basic-navbar-nav">
-              <Nav className="m-auto">
-              <NavDropdown title="Dropdown" id="basic-nav-dropdown">
+              <Nav >
+              <NavDropdown title="All Time" id="basic-nav-dropdown">
                   <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
                   <NavDropdown.Item href="#action/3.2">
                     Another action
@@ -25,7 +25,7 @@ const NavbarTop = () => {
                     Separated link
                   </NavDropdown.Item>
                 </NavDropdown>
-                <NavDropdown title="Dropdown" id="basic-nav-dropdown">
+                <NavDropdown title="All Categories" id="basic-nav-dropdown">
                   <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
                   <NavDropdown.Item href="#action/3.2">
                     Another action
@@ -40,10 +40,9 @@ const NavbarTop = () => {
             <Form.Control
               type="search"
               placeholder="Search"
-              className="me-2"
+              style={{ width: "350px" }}
               aria-label="Search"
             />
-            <Button variant="outline-success">Search</Button>
           </Form>
               </Nav>
             </Navbar.Collapse>

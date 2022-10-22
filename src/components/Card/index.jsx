@@ -14,9 +14,9 @@ const Cards = () => {
         
         {books.map((book) => {
               return (
-                <Col sm={4} >
+                <Col className="text-center d-flex justify-content-center" xl={4} md={6} sm={12} >
                  
-                <Card style={{ width: '18rem' }}>
+                <Card className="mb-5" style={{ width: '18rem' }}>
                 <Card.Body>
                 <Link className="text-decoration-none text-dark" to={'/detail/' + book.id }>
                <Card.Img variant="top" src={book.image} />

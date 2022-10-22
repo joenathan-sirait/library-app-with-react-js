@@ -8,16 +8,17 @@ import { BsFillCheckCircleFill } from "react-icons/bs";
 
 
 const ModalDelete = (props) => {
-      const { buttonName, modalTitle, desc, className} = props;
+      const { buttonName, modalTitle, desc, className, dataAlert} = props;
       const [show, setShow] = useState(false);
       const handleClose = () => setShow(false);
       const handleShow = () => {
-      if (window.confirm("Do you want to save changes?") == true) {
+        const myObj = dataAlert;
+      if (window.confirm("Do you want to " + JSON.stringify(myObj) + " book ?") == true) {
           setShow(true);
       } else {
         setShow(false)
       }
-        
+     
       } 
 
   return (   
@@ -30,8 +31,8 @@ const ModalDelete = (props) => {
             <Modal.Header closeButton>
               <Modal.Title>{modalTitle}</Modal.Title>
             </Modal.Header>
-            <Modal.Body>
-            <BsFillCheckCircleFill />
+            <Modal.Body className='text-center'>
+            <BsFillCheckCircleFill style={{ fontSize : "100px" }} className="text-success fw-bolder mb-3" />
             <h3>{desc}</h3>
             </Modal.Body>
           </Modal>

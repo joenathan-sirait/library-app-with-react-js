@@ -7,11 +7,20 @@ export const TermsStyled = styled.p`
         text-align: center;
         color: black;
         margin-left: 180px;
+        
+        @media (max-width: 768px) {
+            display: flex;
+            flex-direction: column;
+           position: absolute;
+           bottom: 0;
+           left: 70px;    
+        }
   
     }
     &.parent .link {    
         color: grey;
     }
+    
 
 
 

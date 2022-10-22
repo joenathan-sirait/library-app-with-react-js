@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import Form from 'react-bootstrap/Form';
-import { Link, useLocation } from 'react-router-dom';
+import { Link, Redirect  } from 'react-router-dom';
 import Button from '../../components/Button';
 import Input from '../../components/Input';
 import LayoutAuth from '../../layouts/auth'
@@ -10,7 +10,7 @@ import { FormInput } from '../../styles/pages/Login';
     const Login = () => {
         const [username, setUsername] = useState("");
         const [password, setPassword] = useState("");
-  
+        
        
         const usernameChange = (e) => {
           e.preventDefault();
@@ -25,12 +25,12 @@ import { FormInput } from '../../styles/pages/Login';
         };
       
         const checkUser = (e) => {
+
           e.preventDefault();
           if (username === "test@gmail.com") {
             if (password === "test1234") {
               alert("Success Login!");
-             
-             window.location.replace("/"); 
+              window.location.replace("/")
             } else {
               alert("Password salah, silahkan ulangi!");
             }
